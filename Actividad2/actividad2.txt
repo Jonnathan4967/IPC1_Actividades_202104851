@@ -1,0 +1,29 @@
+Proceso VerificarNumeroPrimo
+    Definir n, i, esPrimo Como Entero
+    
+    Escribir "Ingrese un número n:"
+    Leer n
+    
+  
+    Si n <= 1 Entonces
+        Escribir "El número no es primo"
+        FinProceso
+    FinSi
+    
+   
+    esPrimo <- 1
+    
+  
+    Para i <- 2 Hasta trunc(raiz(n)) Con Paso 1 Hacer
+        Si n % i = 0 Entonces
+            Escribir "El número no es primo"
+            esPrimo <- 0
+            FinProceso
+        FinSi
+    FinPara
+    
+    
+    Si esPrimo = 1 Entonces
+        Escribir "El número es primo"
+    FinSi
+FinProceso
